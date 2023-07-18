@@ -1,6 +1,8 @@
 package demo.satwik;
 
 import model.Account;
+import practise.Person;
+import practise.PersonRecord;
 
 // java fx
 // databases
@@ -23,13 +25,10 @@ import model.Account;
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        Account account=new Account();
-        account.setAccountNumber(123466);
-        account.setAccountBalance(10000);
-        account.setPhoneNumber("9140738454");
-        account.setEmail("satwik@gmail.com");
-        account.depositMoney(1000);
-        account.withdrawMoney(200);
+        Person person=new Person("Satwik","Mishra",21);
+        PersonRecord personRecord=new PersonRecord("Naman","Mishra",22);
+        System.out.println(person);
+        System.out.println(personRecord);
     }
 }
 ///conflicts using cherrypick?

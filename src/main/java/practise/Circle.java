@@ -15,9 +15,9 @@ public class Circle {
     }
 }
 
-class Cylinder1 extends Circle {
+class Cylinder extends Circle {
     private double height;
-    public Cylinder1(double radius,double height){
+    public Cylinder(double radius,double height){
         super(radius);
         this.height=height;
         if(this.height<0) this.height=0;
@@ -26,6 +26,6 @@ class Cylinder1 extends Circle {
         return this.height;
     }
     public double getVolume(){
-        return this.area*this.height;
+        return super.getArea()*this.height;
     }
 }

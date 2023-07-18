@@ -1,9 +1,7 @@
 package demo.satwik;
 
 import model.Account;
-import practise.Dog;
-import practise.Person;
-import practise.PersonRecord;
+import practise.*;
 
 // java fx
 // databases
@@ -26,16 +24,16 @@ import practise.PersonRecord;
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-
-        Dog dog1 = new Dog("Labrador","medium",43.4,"normal","curled");
-        Dog dog2 = new Dog("pug","small",20);
-
-        System.out.println(dog1);
-        System.out.println(dog2);
-        dog1.makesNoise();
-        dog2.makesNoise();
-        dog1.moves(33);
-        dog2.moves(65);
+        SalariedEmployee salariedEmployee=new SalariedEmployee("chagan","28/04/1977","28/04/2077",123456,"28/04/2000",1500000,false);
+        System.out.println(salariedEmployee.getAge());
+        salariedEmployee.collectPay();
+        salariedEmployee.terminate();
+        salariedEmployee.retire();
+        HourlyEmployee hourlyEmployee=new HourlyEmployee("magan","28/04/1990","28/04/2077",123456,"28/04/2000",1500);
+        System.out.println(hourlyEmployee.getAge());
+        hourlyEmployee.collectPay();
+        hourlyEmployee.terminate();
+        hourlyEmployee.getDoublePay();
     }
 }
 ///conflicts using cherrypick?

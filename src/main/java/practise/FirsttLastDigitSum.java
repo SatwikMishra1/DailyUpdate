@@ -1,5 +1,7 @@
 package practise;
-
+// solid principles
+// exceptional at exception handling
+//colllection framework is very important
 public class FirsttLastDigitSum {
     // write your code here
     public int sumFirstAndLastDigit(int num){

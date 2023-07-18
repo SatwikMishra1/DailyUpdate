@@ -28,7 +28,8 @@ public class Main {
         Person person=new Person("Satwik","Mishra",21);
         PersonRecord personRecord=new PersonRecord("Naman","Mishra",22);
         System.out.println(person);
-        System.out.println(personRecord);
+        System.out.println(personRecord.isTeen());
+        //System.out.println(personRecord);
     }
 }
 ///conflicts using cherrypick?

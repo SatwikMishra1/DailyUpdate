@@ -1,6 +1,7 @@
 package demo.satwik;
 
 import model.Account;
+import practise.Dog;
 import practise.Person;
 import practise.PersonRecord;
 
@@ -25,11 +26,16 @@ import practise.PersonRecord;
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        Person person=new Person("Satwik","Mishra",21);
-        PersonRecord personRecord=new PersonRecord("Naman","Mishra",22);
-        System.out.println(person);
-        System.out.println(personRecord.isTeen());
-        //System.out.println(personRecord);
+
+        Dog dog1 = new Dog("Labrador","medium",43.4,"normal","curled");
+        Dog dog2 = new Dog("pug","small",20);
+
+        System.out.println(dog1);
+        System.out.println(dog2);
+        dog1.makesNoise();
+        dog2.makesNoise();
+        dog1.moves(33);
+        dog2.moves(65);
     }
 }
 ///conflicts using cherrypick?

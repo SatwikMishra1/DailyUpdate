@@ -1,5 +1,8 @@
 package composition;
 
+import lombok.Data;
+
+@Data
 public class SmartKitchen {
   private CoffeeMaker brewMaster;
   private  DishWasher dishWasher;

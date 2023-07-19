@@ -1,5 +1,9 @@
 package demo.satwik;
 
+import composition.CoffeeMaker;
+import composition.DishWasher;
+import composition.Refrigerator;
+import composition.SmartKitchen;
 import model.Account;
 import practise.*;
 
@@ -24,16 +28,13 @@ import practise.*;
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        SalariedEmployee salariedEmployee=new SalariedEmployee("chagan","28/04/1977","28/04/2077",123456,"28/04/2000",1500000,false);
-        System.out.println(salariedEmployee.getAge());
-        salariedEmployee.collectPay();
-        salariedEmployee.terminate();
-        salariedEmployee.retire();
-        HourlyEmployee hourlyEmployee=new HourlyEmployee("magan","28/04/1990","28/04/2077",123456,"28/04/2000",1500);
-        System.out.println(hourlyEmployee.getAge());
-        hourlyEmployee.collectPay();
-        hourlyEmployee.terminate();
-        hourlyEmployee.getDoublePay();
+        CoffeeMaker coffeeMaker=new CoffeeMaker(false);
+        Refrigerator refrigerator=new Refrigerator(false);
+        DishWasher dishWasher=new DishWasher(false);
+        SmartKitchen smartKitchen=new SmartKitchen(coffeeMaker,dishWasher,refrigerator);
+        smartKitchen.addWater();
+        smartKitchen.pourMilk();
+        smartKitchen.loadDishWasher();
     }
 }
 ///conflicts using cherrypick?

@@ -5,6 +5,8 @@ public class Meal {
     private Drink drink;
     private SideItem sideItem;
 
+    private int[] array;
+
     private boolean isDeluxBurgerMeal;
 
     public void printBill(){

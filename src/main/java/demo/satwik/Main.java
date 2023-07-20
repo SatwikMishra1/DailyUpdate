@@ -1,5 +1,9 @@
 package demo.satwik;
 
+import billsburger.Burger;
+import billsburger.Drink;
+import billsburger.Meal;
+import billsburger.SideItem;
 import composition.CoffeeMaker;
 import composition.DishWasher;
 import composition.Refrigerator;
@@ -29,13 +33,13 @@ import practise.*;
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-      Car car=new Car("this is a sedan");
-      ElectricCar electricCar=new ElectricCar("this is a sedan",22.15,12);
-      electricCar.drive();
-      HybridCar hybridCar=new HybridCar("this is a Hybrid",22.15,12,10);
-      hybridCar.drive();
-      GasPoweredCar gasPoweredCar=new GasPoweredCar("this is a Hybrid",22.15,2);
-      gasPoweredCar.drive();
+        Burger burger=new Burger("onion hamburger",true,false,false);
+        Drink drink=new Drink("Cold Coffee",300);
+        SideItem sideItem=new SideItem("french fries");
+        Meal meal = new Meal(burger,drink,sideItem,true);
+        meal.getBurger().addExtraTopping("onion");
+        meal.getBurger().addExtraTopping("tomato");
+        meal.printBill();
     }
 }
 ///conflicts using cherrypick?

@@ -1,22 +1,12 @@
 package billsburger;
 
-public class Drink {
-    private Commodity commodity;
+public class Drink extends Commodity{
+
     private int size;
 
     public Drink(String type, int size) {
-        this.commodity=new Commodity();
-        int price=(size<100)?500:(size>500)?1000:750;
-        this.commodity = new Commodity(type,price);
+        super(type,(size<100)?500:(size>500)?1000:750);
         this.size = size;
-    }
-
-    public Commodity getCommodity() {
-        return commodity;
-    }
-
-    public void setCommodity(Commodity commodity) {
-        this.commodity = commodity;
     }
 
     public int getSize() {

@@ -8,10 +8,10 @@ public class Meal {
     private boolean isDeluxBurgerMeal;
 
     public void printBill(){
-        int total=burger.getCommodity().getPrice()+drink.getCommodity().getPrice()+sideItem.getCommodity().getPrice();
+        int total=burger.getPrice()+drink.getPrice()+sideItem.getCommodity().getPrice();
         System.out.println("Your total bill is "+total);
-        System.out.println("Burger ------> "+burger.getCommodity().getPrice());
-        System.out.println("Drink ------> "+ drink.getCommodity().getPrice());
+        System.out.println("Burger ------> "+burger.getPrice());
+        System.out.println("Drink ------> "+ drink.getPrice());
         System.out.println("Side Item ------> "+sideItem.getCommodity().getPrice());
     }
 

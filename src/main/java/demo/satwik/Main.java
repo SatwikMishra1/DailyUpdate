@@ -33,6 +33,19 @@ public class Main {
     public static void main(String[] args) {
         Movie movie=new Scary("The Grudge");
         movie.watchMovie();
+//        Movie m=movie.getMovie("hum sath hai","A");
+//        m.watchMovie();
+//        Object mm=movie.getMovie("bhoot police","S");
+//        Movie mhh=(Movie) mm;
+//        mhh.watchMovie();
+        Object muvee = movie.getMovie("intekam","A");
+        Adventure adventure=new Adventure("dhammal");
+        if(adventure instanceof Movie){
+            System.out.println("this is a movie");
+        }
+        if(movie instanceof Adventure){
+            ((Adventure) muvee).watchMovie();
+        }
     }
 }
 ///conflicts using cherrypick?

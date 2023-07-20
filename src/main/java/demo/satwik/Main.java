@@ -5,9 +5,7 @@ import composition.DishWasher;
 import composition.Refrigerator;
 import composition.SmartKitchen;
 import model.Account;
-import polymorphism.Adventure;
-import polymorphism.Movie;
-import polymorphism.Scary;
+import polymorphism.*;
 import practise.*;
 
 // java fx
@@ -31,21 +29,13 @@ import practise.*;
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        Movie movie=new Scary("The Grudge");
-        movie.watchMovie();
-//        Movie m=movie.getMovie("hum sath hai","A");
-//        m.watchMovie();
-//        Object mm=movie.getMovie("bhoot police","S");
-//        Movie mhh=(Movie) mm;
-//        mhh.watchMovie();
-        Object muvee = movie.getMovie("intekam","A");
-        Adventure adventure=new Adventure("dhammal");
-        if(adventure instanceof Movie){
-            System.out.println("this is a movie");
-        }
-        if(movie instanceof Adventure){
-            ((Adventure) muvee).watchMovie();
-        }
+      Car car=new Car("this is a sedan");
+      ElectricCar electricCar=new ElectricCar("this is a sedan",22.15,12);
+      electricCar.drive();
+      HybridCar hybridCar=new HybridCar("this is a Hybrid",22.15,12,10);
+      hybridCar.drive();
+      GasPoweredCar gasPoweredCar=new GasPoweredCar("this is a Hybrid",22.15,2);
+      gasPoweredCar.drive();
     }
 }
 ///conflicts using cherrypick?

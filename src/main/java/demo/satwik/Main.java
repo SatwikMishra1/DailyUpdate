@@ -8,6 +8,7 @@ import composition.CoffeeMaker;
 import composition.DishWasher;
 import composition.Refrigerator;
 import composition.SmartKitchen;
+import list.ListPractise;
 import model.Account;
 import polymorphism.*;
 import practise.*;
@@ -33,13 +34,15 @@ import practise.*;
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        Burger burger=new Burger("onion hamburger",true,false,false);
-        Drink drink=new Drink("Cold Coffee",300);
-        SideItem sideItem=new SideItem("french fries");
-        Meal meal = new Meal(burger,drink,sideItem,true);
-        meal.getBurger().addExtraTopping("onion");
-        meal.getBurger().addExtraTopping("tomato");
-        meal.printBill();
+//        Burger burger=new Burger("onion hamburger",true,false,false);
+//        Drink drink=new Drink("Cold Coffee",300);
+//        SideItem sideItem=new SideItem("french fries");
+//        Meal meal = new Meal(burger,drink,sideItem,true);
+//        meal.getBurger().addExtraTopping("onion");
+//        meal.getBurger().addExtraTopping("tomato");
+//        meal.printBill();
+        ListPractise listPractise=new ListPractise();
+        listPractise.practise();
     }
 }
 ///conflicts using cherrypick?

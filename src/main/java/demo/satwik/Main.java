@@ -12,6 +12,8 @@ import composition.Refrigerator;
 import composition.SmartKitchen;
 import demo.satwik.util.Helperutils;
 import functionalinterface.Operator;
+import lambdafunctions.LambdaOnArrayList;
+import lambdafunctions.LambdaPractise;
 import list.ListPractise;
 import model.Account;
 import nestedclasses.Employee;
@@ -19,6 +21,7 @@ import nestedclasses.EmployeeComparator;
 import polymorphism.*;
 
 import java.util.*;
+import java.util.function.Consumer;
 
 // java fx
 // databases
@@ -41,33 +44,39 @@ import java.util.*;
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-      ArrayList<Employee> employees= new ArrayList<>(List.of(
-              new Employee(10001,"ralph",2015),
-              new Employee(10034,"david",2009),
-              new Employee(10654,"harman",2019),
-              new Employee(11324,"tarun",2022)
-        ));
-//        var employeeComparator=new EmployeeComparator<>();
-//        employees.sort((o1, o2) -> o1.getName().compareTo(o2.getName()));
-
-        employees.sort(new Comparator<Employee>() {
-            @Override
-            public int compare(Employee o1, Employee o2) {
-                return o1.getName().compareTo(o2.getName());
-            }});
-//        for(var employee: employees){
-//            System.out.println(employee);
-//        }
-        List<String> list=new ArrayList<>(List.of("Ranjit","Tarun","Satwik","Sohail"));
-        list.forEach((name) -> System.out.println("Hello "+name));
-        list.forEach((name) -> {
-            if(Objects.equals(name, "Ranjit")){
-                System.out.println(name+" Chouhan");
-            }else {
-                System.out.println("Hello " + name);
-            }
-        });
-        var answer=calculator(Helperutils::adSum,10,21);
+//      ArrayList<Employee> employees= new ArrayList<>(List.of(
+//              new Employee(10001,"ralph",2015),
+//              new Employee(10034,"david",2009),
+//              new Employee(10654,"harman",2019),
+//              new Employee(11324,"tarun",2022)
+//        ));
+////        var employeeComparator=new EmployeeComparator<>();
+////        employees.sort((o1, o2) -> o1.getName().compareTo(o2.getName()));
+//
+//        employees.sort(new Comparator<Employee>() {
+//            @Override
+//            public int compare(Employee o1, Employee o2) {
+//                return o1.getName().compareTo(o2.getName());
+//            }});
+////        for(var employee: employees){
+////            System.out.println(employee);
+////        }
+//        List<String> list=new ArrayList<>(List.of("Ranjit","Tarun","Satwik","Sohail"));
+//        list.forEach((name) -> System.out.println("Hello "+name));
+//        list.forEach((name) -> {
+//            if(Objects.equals(name, "Ranjit")){
+//                System.out.println(name+" Chouhan");
+//            }else {
+//                System.out.println("Hello " + name);
+//            }
+//        });
+//        list.replaceAll(s -> s.charAt(0) + " - " + s.toUpperCase());
+//        list.forEach(s->System.out.println(s));
+//        var answer=calculator(Helperutils::adSum,10,21);
+//        LambdaPractise lambdaPractise=new LambdaPractise();
+//        lambdaPractise.practise();
+        LambdaOnArrayList lambda=new LambdaOnArrayList();
+        lambda.function();
     }
 
     private void doSomething(final Employee employee) {

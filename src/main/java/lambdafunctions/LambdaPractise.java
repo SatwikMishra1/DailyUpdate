@@ -10,7 +10,7 @@ public class LambdaPractise {
         Consumer<String> printTheParts = (s -> {
            String[] parts=s.split(" ");
            List<String> a = Arrays.stream(parts).toList();
-           a.forEach(ss->System.out.println(ss));
+           a.forEach(System.out::println);
         });
         printTheParts.accept("this is my time");
 
@@ -27,5 +27,6 @@ public class LambdaPractise {
         Supplier<String> ss = () -> "I love java";
         String ilovejava = ss.get();
         System.out.println(ilovejava);
+        BinaryOperator<String> binaryOperator = String::concat;
     }
 }
